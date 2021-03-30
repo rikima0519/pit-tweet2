@@ -1,5 +1,8 @@
 <nav class="global-nav">
       <div class="container">
+
+        <% if user_signed_in? %>
+
         <div class="navigation">
           <ul class="left-actions">
             <li class="nav-item">
@@ -12,5 +15,15 @@
             </li>
           </ul>
         </div>
+
+        <% else %>
+          <div class="navigation">
+        <ul class="left-actions">
+          <li class="nav-item">
+            <%= link_to "Pit Tweet", "#", class: "nav-brand" %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
       </div>
     </nav>
